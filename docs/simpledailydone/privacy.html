@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - SimpleDailyDone</title>
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --text: #1f2937;
+            --text-secondary: #6b7280;
+            --accent: #3b82f6;
+            --border: #e5e7eb;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        header {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .lang-switch button {
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.35rem 0.75rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .lang-switch button.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        main {
+            max-width: 720px;
+            margin: 2rem auto;
+            padding: 0 1.5rem 4rem;
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .content {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            white-space: pre-line;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+        footer a { margin: 0 0.5rem; }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 720px;
+            margin: 1rem auto 0;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a class="brand" href="/">SimpleDailyDone</a>
+            <nav class="lang-switch">
+                <button data-lang="zh-Hans" class="active">简体中文</button>
+                <button data-lang="zh-Hant">繁體中文</button>
+                <button data-lang="en">English</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 简体中文 -->
+        <section class="lang-section active" data-lang="zh-Hans">
+            <h1>隐私政策</h1>
+            <div class="content">极简每日打卡尊重并保护您的隐私。
+
+1. 数据存储
+所有数据（打卡内容、打卡记录、设置等）仅存储在您的设备本地，不会上传到任何服务器。
+
+2. 数据共享
+我们不会与任何第三方共享您的数据。
+
+3. 权限说明
+• 相机权限：用于拍照分享功能。
+• 相册权限：用于保存分享图片到您的相册。
+• 通知权限：用于每日打卡提醒。
+
+4. 联系我们
+如有任何问题，请通过 <a href="mailto:motushu@outlook.com">motushu@outlook.com</a> 联系我们。</div>
+        </section>
+
+        <!-- 繁體中文 -->
+        <section class="lang-section" data-lang="zh-Hant">
+            <h1>隱私政策</h1>
+            <div class="content">極簡每日打卡尊重並保護您的隱私。
+
+1. 資料儲存
+所有資料（打卡內容、打卡記錄、設定等）僅儲存在您的裝置本地，不會上傳到任何伺服器。
+
+2. 資料分享
+我們不會與任何第三方分享您的資料。
+
+3. 權限說明
+• 相機權限：用於拍照分享功能。
+• 相簿權限：用於儲存分享圖片到您的相簿。
+• 通知權限：用於每日打卡提醒。
+
+4. 聯絡我們
+如有任何問題，請透過 <a href="mailto:motushu@outlook.com">motushu@outlook.com</a> 聯絡我們。</div>
+        </section>
+
+        <!-- English -->
+        <section class="lang-section" data-lang="en">
+            <h1>Privacy Policy</h1>
+            <div class="content">Daily Done respects and protects your privacy.
+
+1. Data Storage
+All data (check-in content, records, settings, etc.) is stored locally on your device only and will not be uploaded to any server.
+
+2. Data Sharing
+We do not share your data with any third party.
+
+3. Permissions
+• Camera: Used for taking photos to share your check-in stats.
+• Photo Library: Used for saving share images to your album.
+• Notifications: Used for daily check-in reminders.
+
+4. Contact
+If you have any questions, please contact us at <a href="mailto:motushu@outlook.com">motushu@outlook.com</a>.</div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="term.html">Terms of Use</a>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 SimpleDailyDone. All rights reserved.</span>
+            <span>2026年6月11日</span>
+        </div>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.lang-switch button');
+        const sections = document.querySelectorAll('.lang-section');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                sections.forEach(s => {
+                    s.classList.toggle('active', s.dataset.lang === lang);
+                });
+                localStorage.setItem('simpledailydone-lang', lang);
+            });
+        });
+
+        const savedLang = localStorage.getItem('simpledailydone-lang');
+        if (savedLang) {
+            const btn = document.querySelector(`.lang-switch button[data-lang="${savedLang}"]`);
+            if (btn) btn.click();
+        }
+    </script>
+</body>
+</html>
