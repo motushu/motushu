@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - SimpleDailyDone</title>
+    <title>隐私政策</title>
     <style>
         :root {
             --bg: #f5f7fa;
@@ -101,7 +101,7 @@
 <body>
     <header>
         <div class="header-inner">
-            <a class="brand" href="/">SimpleDailyDone</a>
+            <a id="brand" class="brand" href="/">极简每日打卡</a>
             <nav class="lang-switch">
                 <button data-lang="zh-Hans" class="active">简体中文</button>
                 <button data-lang="zh-Hant">繁體中文</button>
@@ -199,10 +199,39 @@ If you have any questions, please contact us at <a href="mailto:motushu@outlook.
             });
         });
 
+        const brandNames = {
+            'zh-Hans': '极简每日打卡',
+            'zh-Hant': '極簡每日打卡',
+            'en': 'DailyDone'
+        };
+
+        function updateBrand(lang) {
+            const brand = document.getElementById('brand');
+            if (brand && brandNames[lang]) {
+                brand.textContent = brandNames[lang];
+            }
+            const titles = {
+                'zh-Hans': '隐私政策 - 极简每日打卡',
+                'zh-Hant': '隱私政策 - 極簡每日打卡',
+                'en': 'Privacy Policy - DailyDone'
+            };
+            if (titles[lang]) {
+                document.title = titles[lang];
+            }
+        }
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                updateBrand(btn.dataset.lang);
+            });
+        });
+
         const savedLang = localStorage.getItem('simpledailydone-lang');
         if (savedLang) {
             const btn = document.querySelector(`.lang-switch button[data-lang="${savedLang}"]`);
             if (btn) btn.click();
+        } else {
+            updateBrand('zh-Hans');
         }
     </script>
 </body>
