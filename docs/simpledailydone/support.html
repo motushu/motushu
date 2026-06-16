@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术支持</title>
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --text: #1f2937;
+            --text-secondary: #6b7280;
+            --accent: #3b82f6;
+            --border: #e5e7eb;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        header {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .lang-switch button {
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.35rem 0.75rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .lang-switch button.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        main {
+            max-width: 720px;
+            margin: 2rem auto;
+            padding: 0 1.5rem 4rem;
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.25rem; margin-top: 1.75rem; margin-bottom: 0.75rem; }
+        .content {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .faq-item { margin-bottom: 1.25rem; }
+        .faq-item:last-child { margin-bottom: 0; }
+        .faq-q { font-weight: 600; margin-bottom: 0.35rem; }
+        .faq-a { color: var(--text-secondary); }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+        footer a { margin: 0 0.5rem; }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 720px;
+            margin: 1rem auto 0;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a id="brand" class="brand" href="/">极简每日打卡</a>
+            <nav class="lang-switch">
+                <button data-lang="zh-Hans" class="active">简体中文</button>
+                <button data-lang="zh-Hant">繁體中文</button>
+                <button data-lang="en">English</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 简体中文 -->
+        <section class="lang-section active" data-lang="zh-Hans">
+            <h1>技术支持</h1>
+            <div class="content">
+                <p>如果你在使用「极简每日打卡」时遇到问题，或有任何建议，欢迎通过页面底部的邮箱联系我们。</p>
+
+                <h2>常见问题</h2>
+                <div class="faq-item">
+                    <div class="faq-q">数据会丢失吗？</div>
+                    <div class="faq-a">所有数据都保存在你的设备本地。建议定期使用 App 内的「导出数据」功能备份，以防设备损坏或更换。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">为什么收不到打卡提醒？</div>
+                    <div class="faq-a">请在 iOS 设置中确认已允许通知权限，并在 App 内开启打卡提醒、设置提醒时间。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">如何恢复数据？</div>
+                    <div class="faq-a">使用 App 内的「导入数据」功能，选择之前导出的备份文件即可恢复。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">App 需要联网吗？</div>
+                    <div class="faq-a">不需要。本应用完全离线运行，无需注册账号，也不会上传任何数据。</div>
+                </div>
+
+                <h2>联系我们</h2>
+                <p>邮箱：<a href="mailto:motushu@outlook.com">motushu@outlook.com</a></p>
+            </div>
+        </section>
+
+        <!-- 繁體中文 -->
+        <section class="lang-section" data-lang="zh-Hant">
+            <h1>技術支持</h1>
+            <div class="content">
+                <p>如果你在使用「極簡每日打卡」時遇到問題，或有任何建議，歡迎透過頁面底部的郵箱聯絡我們。</p>
+
+                <h2>常見問題</h2>
+                <div class="faq-item">
+                    <div class="faq-q">數據會丟失嗎？</div>
+                    <div class="faq-a">所有數據都儲存在你的裝置本地。建議定期使用 App 內的「匯出數據」功能備份，以防裝置損壞或更換。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">為什麼收不到打卡提醒？</div>
+                    <div class="faq-a">請在 iOS 設定中確認已允許通知權限，並在 App 內開啟打卡提醒、設定提醒時間。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">如何恢復數據？</div>
+                    <div class="faq-a">使用 App 內的「匯入數據」功能，選擇之前匯出的備份檔案即可恢復。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">App 需要連網嗎？</div>
+                    <div class="faq-a">不需要。本應用完全離線運行，無需註冊帳號，也不會上傳任何數據。</div>
+                </div>
+
+                <h2>聯絡我們</h2>
+                <p>郵箱：<a href="mailto:motushu@outlook.com">motushu@outlook.com</a></p>
+            </div>
+        </section>
+
+        <!-- English -->
+        <section class="lang-section" data-lang="en">
+            <h1>Support</h1>
+            <div class="content">
+                <p>If you encounter any issues while using Daily Done, or have any suggestions, please contact us via the email at the bottom of this page.</p>
+
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-q">Will my data be lost?</div>
+                    <div class="faq-a">All data is stored locally on your device. We recommend using the "Export Data" feature in the app regularly to back up your records.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Why am I not receiving reminders?</div>
+                    <div class="faq-a">Please make sure notifications are allowed in iOS Settings, and that you have enabled reminders and set a reminder time in the app.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">How do I restore my data?</div>
+                    <div class="faq-a">Use the "Import Data" feature in the app and select a previously exported backup file.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Does the app require internet?</div>
+                    <div class="faq-a">No. This app works completely offline. No account registration is required, and no data is uploaded.</div>
+                </div>
+
+                <h2>Contact Us</h2>
+                <p>Email: <a href="mailto:motushu@outlook.com">motushu@outlook.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="term.html">Terms of Use</a>
+            <a href="support.html">Support</a>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 SimpleDailyDone. All rights reserved.</span>
+            <span>2026年6月11日</span>
+        </div>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.lang-switch button');
+        const sections = document.querySelectorAll('.lang-section');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                sections.forEach(s => {
+                    s.classList.toggle('active', s.dataset.lang === lang);
+                });
+                localStorage.setItem('simpledailydone-lang', lang);
+            });
+        });
+
+        const brandNames = {
+            'zh-Hans': '极简每日打卡',
+            'zh-Hant': '極簡每日打卡',
+            'en': 'DailyDone'
+        };
+
+        function updateBrand(lang) {
+            const brand = document.getElementById('brand');
+            if (brand && brandNames[lang]) {
+                brand.textContent = brandNames[lang];
+            }
+            const titles = {
+                'zh-Hans': '技术支持 - 极简每日打卡',
+                'zh-Hant': '技術支持 - 極簡每日打卡',
+                'en': 'Support - DailyDone'
+            };
+            if (titles[lang]) {
+                document.title = titles[lang];
+            }
+        }
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                updateBrand(btn.dataset.lang);
+            });
+        });
+
+        const savedLang = localStorage.getItem('simpledailydone-lang');
+        if (savedLang) {
+            const btn = document.querySelector(`.lang-switch button[data-lang="${savedLang}"]`);
+            if (btn) btn.click();
+        } else {
+            updateBrand('zh-Hans');
+        }
+    </script>
+</body>
+</html>
